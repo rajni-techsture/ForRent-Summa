@@ -1,0 +1,1276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{237E6D92-94F0-42CA-8AC4-79E06326CF6D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>tsma</RootNamespace>
+    <AssemblyName>tsma</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>tsma.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>tsma.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Facebook, Version=5.2.1.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="FredCK.FCKeditorV2, Version=2.6.3.22452, Culture=neutral, PublicKeyToken=4f86767c9b519a06, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="TechstureIConverter, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\TechstureIConverter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.aspx" />
+    <Content Include="Admin\add-admin-user.aspx" />
+    <Content Include="Admin\add-company.aspx" />
+    <Content Include="Admin\add-fan-friday.aspx" />
+    <Content Include="Admin\add-industry.aspx" />
+    <Content Include="Admin\add-library-category.aspx" />
+    <Content Include="Admin\add-library-data.aspx" />
+    <Content Include="Admin\add-user.aspx" />
+    <Content Include="Admin\add-weekly-tip.aspx" />
+    <Content Include="Admin\ConsolidatedReport.aspx" />
+    <Content Include="Admin\footer-small.ascx" />
+    <Content Include="Admin\footer.ascx" />
+    <Content Include="Admin\header-small.ascx" />
+    <Content Include="Admin\header.ascx" />
+    <Content Include="Admin\import-bulk-data.aspx" />
+    <Content Include="Admin\index.aspx" />
+    <Content Include="Admin\left.ascx" />
+    <Content Include="Admin\login.aspx" />
+    <Content Include="Admin\logout.aspx" />
+    <Content Include="Admin\manage-admin-users.aspx" />
+    <Content Include="Admin\manage-autopost.aspx" />
+    <Content Include="Admin\manage-companies.aspx" />
+    <Content Include="Admin\manage-fan-friday.aspx" />
+    <Content Include="Admin\manage-imagepost.aspx" />
+    <Content Include="Admin\manage-industries.aspx" />
+    <Content Include="Admin\manage-library-categories.aspx" />
+    <Content Include="Admin\manage-library-data.aspx" />
+    <Content Include="Admin\manage-linkpost.aspx" />
+    <Content Include="Admin\manage-published-customtab.aspx" />
+    <Content Include="Admin\manage-published-sidebar.aspx" />
+    <Content Include="Admin\manage-published-sweepstake.aspx" />
+    <Content Include="Admin\manage-quickpost.aspx" />
+    <Content Include="Admin\manage-saved-customtab.aspx" />
+    <Content Include="Admin\manage-saved-sidebar.aspx" />
+    <Content Include="Admin\manage-schedulepost.aspx" />
+    <Content Include="Admin\manage-textpost.aspx" />
+    <Content Include="Admin\manage-users.aspx" />
+    <Content Include="Admin\manage-videopost.aspx" />
+    <Content Include="Admin\manage-weekly-tip.aspx" />
+    <Content Include="Admin\Preview-Menus.aspx" />
+    <Content Include="Admin\republish-data.aspx" />
+    <Content Include="Admin\test-add-library-data.aspx" />
+    <Content Include="Admin\test.aspx" />
+    <Content Include="aflac_header.jpg" />
+    <Content Include="ajax\ajax-custom-tab-info.aspx" />
+    <Content Include="ajax\ajax-post-customtab.aspx" />
+    <Content Include="ajax\ajax-post-sweepstake.aspx" />
+    <Content Include="ajax\ajax-sweepstak-contest.aspx" />
+    <Content Include="AutoPost.aspx" />
+    <Content Include="AutoScheduler.aspx" />
+    <Content Include="AutoSweepstake.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\BusinessAccessLayer.dll" />
+    <Content Include="bin\DataAccessLayer.dll" />
+    <Content Include="bin\Facebook.dll" />
+    <Content Include="bin\System.Web.Routing.dll" />
+    <Content Include="bin\TechstureIConverter.dll" />
+    <Content Include="bin\tsma.dll" />
+    <Content Include="bin\tsma.pdb" />
+    <Content Include="bin\tsma.xml" />
+    <Content Include="configure-autopost.aspx" />
+    <Content Include="cover-photo-selection-edit.aspx" />
+    <Content Include="cover-photo-selection.aspx" />
+    <Content Include="cover-photos-home.aspx" />
+    <Content Include="cover-photos.aspx" />
+    <Content Include="crop2.aspx" />
+    <Content Include="custom-tab-home.aspx" />
+    <Content Include="custom-tab-selection-edit.aspx" />
+    <Content Include="custom-tab-selection-test.aspx" />
+    <Content Include="custom-tab-selection.aspx" />
+    <Content Include="custom-tabs-test.aspx" />
+    <Content Include="custom-tabs.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="download.aspx" />
+    <Content Include="express-customtab.aspx" />
+    <Content Include="express-sidebar.aspx" />
+    <Content Include="fanpages.aspx" />
+    <Content Include="footer.ascx" />
+    <Content Include="friendlist.aspx" />
+    <Content Include="gcPost.aspx" />
+    <Content Include="generate-cover-image.aspx" />
+    <Content Include="generate-ct-image.aspx" />
+    <Content Include="generate_image.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="handshake.aspx" />
+    <Content Include="header.ascx" />
+    <Content Include="html-toImage.aspx" />
+    <Content Include="Admin\import-library-data.aspx" />
+    <Content Include="inner-footer.ascx" />
+    <Content Include="inner-header.ascx" />
+    <Content Include="left.ascx" />
+    <Content Include="library.aspx" />
+    <Content Include="local-user.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="page-post-data.aspx" />
+    <Content Include="pending-messages.aspx" />
+    <Content Include="publish-cover-photo-edit.aspx" />
+    <Content Include="publish-cover-photo.aspx" />
+    <Content Include="publish-custom-tab.aspx" />
+    <Content Include="publish-sidebar-edit.aspx" />
+    <Content Include="publish-sidebar.aspx" />
+    <Content Include="Remove-Post.aspx" />
+    <Content Include="scheduler-home.aspx" />
+    <Content Include="scheduler-new.aspx" />
+    <Content Include="scheduler.aspx" />
+    <Content Include="select-test.aspx" />
+    <Content Include="selection-test.aspx" />
+    <Content Include="sent-messages.aspx" />
+    <Content Include="resize-tabs.ashx" />
+    <None Include="CSVFiles\templates\csv-library-import-template.csv.xlsx" />
+    <None Include="Service References\ForrentAuthontication\configuration91.svcinfo" />
+    <None Include="Service References\ForrentAuthontication\configuration.svcinfo" />
+    <None Include="Service References\ForrentAuthontication\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="setup-page.aspx" />
+    <Content Include="sidebar-home.aspx" />
+    <Content Include="sidebar-templates.aspx" />
+    <Content Include="sidebar.aspx" />
+    <Content Include="sidebar_selection.aspx" />
+    <Content Include="sidebar_selection_edit.aspx" />
+    <Content Include="SiteUserLogout.aspx" />
+    <Content Include="siteuserlogin.aspx" />
+    <Content Include="support.aspx" />
+    <Content Include="sweepstake-content.aspx" />
+    <Content Include="sweepstake-home.aspx" />
+    <Content Include="sweepstake.aspx" />
+    <Content Include="sweepstake1.aspx" />
+    <Content Include="tab.aspx" />
+    <Content Include="templates.aspx" />
+    <Content Include="test-image-generate.aspx" />
+    <Content Include="test-webservice.aspx" />
+    <Content Include="test1.aspx" />
+    <Content Include="testGC.aspx" />
+    <Content Include="training.aspx" />
+    <Content Include="tsma-iframe.aspx" />
+    <Content Include="upload1.ashx" />
+    <Content Include="usercontrols\footer.ascx" />
+    <Content Include="usercontrols\inner-header.ascx" />
+    <Content Include="usercontrols\left.ascx" />
+    <Content Include="view-autopost.aspx" />
+    <Content Include="view-video.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebService\CompanyPassword.aspx" />
+    <Content Include="WebService\save-user-selection.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="404.aspx.designer.vb">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="404.aspx.vb">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-admin-user.aspx.designer.vb">
+      <DependentUpon>add-admin-user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\add-admin-user.aspx.vb">
+      <DependentUpon>add-admin-user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-company.aspx.designer.vb">
+      <DependentUpon>add-company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\add-company.aspx.vb">
+      <DependentUpon>add-company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-fan-friday.aspx.designer.vb">
+      <DependentUpon>add-fan-friday.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\add-fan-friday.aspx.vb">
+      <DependentUpon>add-fan-friday.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-industry.aspx.designer.vb">
+      <DependentUpon>add-industry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\add-industry.aspx.vb">
+      <DependentUpon>add-industry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-library-category.aspx.designer.vb">
+      <DependentUpon>add-library-category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\add-library-category.aspx.vb">
+      <DependentUpon>add-library-category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-library-data.aspx.designer.vb">
+      <DependentUpon>add-library-data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\add-library-data.aspx.vb">
+      <DependentUpon>add-library-data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-user.aspx.designer.vb">
+      <DependentUpon>add-user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\add-user.aspx.vb">
+      <DependentUpon>add-user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-weekly-tip.aspx.designer.vb">
+      <DependentUpon>add-weekly-tip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\add-weekly-tip.aspx.vb">
+      <DependentUpon>add-weekly-tip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ConsolidatedReport.aspx.designer.vb">
+      <DependentUpon>ConsolidatedReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ConsolidatedReport.aspx.vb">
+      <DependentUpon>ConsolidatedReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\footer-small.ascx.designer.vb">
+      <DependentUpon>footer-small.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\footer-small.ascx.vb">
+      <DependentUpon>footer-small.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\footer.ascx.designer.vb">
+      <DependentUpon>footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\footer.ascx.vb">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\header-small.ascx.designer.vb">
+      <DependentUpon>header-small.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\header-small.ascx.vb">
+      <DependentUpon>header-small.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\header.ascx.designer.vb">
+      <DependentUpon>header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\header.ascx.vb">
+      <DependentUpon>header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\import-bulk-data.aspx.designer.vb">
+      <DependentUpon>import-bulk-data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\import-bulk-data.aspx.vb">
+      <DependentUpon>import-bulk-data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\index.aspx.designer.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\index.aspx.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\left.ascx.designer.vb">
+      <DependentUpon>left.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\left.ascx.vb">
+      <DependentUpon>left.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\logout.aspx.designer.vb">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\logout.aspx.vb">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-admin-users.aspx.designer.vb">
+      <DependentUpon>manage-admin-users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-admin-users.aspx.vb">
+      <DependentUpon>manage-admin-users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-autopost.aspx.designer.vb">
+      <DependentUpon>manage-autopost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-autopost.aspx.vb">
+      <DependentUpon>manage-autopost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-companies.aspx.designer.vb">
+      <DependentUpon>manage-companies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-companies.aspx.vb">
+      <DependentUpon>manage-companies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-fan-friday.aspx.designer.vb">
+      <DependentUpon>manage-fan-friday.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-fan-friday.aspx.vb">
+      <DependentUpon>manage-fan-friday.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-imagepost.aspx.designer.vb">
+      <DependentUpon>manage-imagepost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-imagepost.aspx.vb">
+      <DependentUpon>manage-imagepost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-industries.aspx.designer.vb">
+      <DependentUpon>manage-industries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-industries.aspx.vb">
+      <DependentUpon>manage-industries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-library-categories.aspx.designer.vb">
+      <DependentUpon>manage-library-categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-library-categories.aspx.vb">
+      <DependentUpon>manage-library-categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-library-data.aspx.designer.vb">
+      <DependentUpon>manage-library-data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-library-data.aspx.vb">
+      <DependentUpon>manage-library-data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-linkpost.aspx.designer.vb">
+      <DependentUpon>manage-linkpost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-linkpost.aspx.vb">
+      <DependentUpon>manage-linkpost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-published-customtab.aspx.designer.vb">
+      <DependentUpon>manage-published-customtab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-published-customtab.aspx.vb">
+      <DependentUpon>manage-published-customtab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-published-sidebar.aspx.designer.vb">
+      <DependentUpon>manage-published-sidebar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-published-sidebar.aspx.vb">
+      <DependentUpon>manage-published-sidebar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-published-sweepstake.aspx.designer.vb">
+      <DependentUpon>manage-published-sweepstake.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-published-sweepstake.aspx.vb">
+      <DependentUpon>manage-published-sweepstake.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-quickpost.aspx.designer.vb">
+      <DependentUpon>manage-quickpost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-quickpost.aspx.vb">
+      <DependentUpon>manage-quickpost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-saved-customtab.aspx.designer.vb">
+      <DependentUpon>manage-saved-customtab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-saved-customtab.aspx.vb">
+      <DependentUpon>manage-saved-customtab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-saved-sidebar.aspx.designer.vb">
+      <DependentUpon>manage-saved-sidebar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-saved-sidebar.aspx.vb">
+      <DependentUpon>manage-saved-sidebar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-schedulepost.aspx.designer.vb">
+      <DependentUpon>manage-schedulepost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-schedulepost.aspx.vb">
+      <DependentUpon>manage-schedulepost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-textpost.aspx.designer.vb">
+      <DependentUpon>manage-textpost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-textpost.aspx.vb">
+      <DependentUpon>manage-textpost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-users.aspx.designer.vb">
+      <DependentUpon>manage-users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-users.aspx.vb">
+      <DependentUpon>manage-users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-videopost.aspx.designer.vb">
+      <DependentUpon>manage-videopost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-videopost.aspx.vb">
+      <DependentUpon>manage-videopost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-weekly-tip.aspx.designer.vb">
+      <DependentUpon>manage-weekly-tip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-weekly-tip.aspx.vb">
+      <DependentUpon>manage-weekly-tip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Preview-Menus.aspx.designer.vb">
+      <DependentUpon>Preview-Menus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Preview-Menus.aspx.vb">
+      <DependentUpon>Preview-Menus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\republish-data.aspx.designer.vb">
+      <DependentUpon>republish-data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\republish-data.aspx.vb">
+      <DependentUpon>republish-data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\test-add-library-data.aspx.designer.vb">
+      <DependentUpon>test-add-library-data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\test-add-library-data.aspx.vb">
+      <DependentUpon>test-add-library-data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\test.aspx.designer.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\test.aspx.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\ajax-custom-tab-info.aspx.designer.vb">
+      <DependentUpon>ajax-custom-tab-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\ajax-custom-tab-info.aspx.vb">
+      <DependentUpon>ajax-custom-tab-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\ajax-post-customtab.aspx.designer.vb">
+      <DependentUpon>ajax-post-customtab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\ajax-post-customtab.aspx.vb">
+      <DependentUpon>ajax-post-customtab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\ajax-post-sweepstake.aspx.designer.vb">
+      <DependentUpon>ajax-post-sweepstake.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\ajax-post-sweepstake.aspx.vb">
+      <DependentUpon>ajax-post-sweepstake.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\ajax-sweepstak-contest.aspx.designer.vb">
+      <DependentUpon>ajax-sweepstak-contest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\ajax-sweepstak-contest.aspx.vb">
+      <DependentUpon>ajax-sweepstak-contest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutoPost.aspx.designer.vb">
+      <DependentUpon>AutoPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AutoPost.aspx.vb">
+      <DependentUpon>AutoPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutoScheduler.aspx.designer.vb">
+      <DependentUpon>AutoScheduler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AutoScheduler.aspx.vb">
+      <DependentUpon>AutoScheduler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutoSweepstake.aspx.designer.vb">
+      <DependentUpon>AutoSweepstake.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AutoSweepstake.aspx.vb">
+      <DependentUpon>AutoSweepstake.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\Albums.vb" />
+    <Compile Include="Classes\checkApp.vb" />
+    <Compile Include="Classes\clsSweepStake.vb" />
+    <Compile Include="Classes\CustomTab.vb" />
+    <Compile Include="Classes\FaceBookFriendList.vb" />
+    <Compile Include="Classes\FacebookUser.vb" />
+    <Compile Include="Classes\FanPage.vb" />
+    <Compile Include="Classes\ReadWriteCSV.vb" />
+    <Compile Include="cls_CompanyPasswordValidation.vb" />
+    <Compile Include="cls_SaveUserSelection.vb" />
+    <Compile Include="configure-autopost.aspx.designer.vb">
+      <DependentUpon>configure-autopost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="configure-autopost.aspx.vb">
+      <DependentUpon>configure-autopost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cookies.vb" />
+    <Compile Include="cover-photo-selection-edit.aspx.designer.vb">
+      <DependentUpon>cover-photo-selection-edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cover-photo-selection-edit.aspx.vb">
+      <DependentUpon>cover-photo-selection-edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cover-photo-selection.aspx.designer.vb">
+      <DependentUpon>cover-photo-selection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cover-photo-selection.aspx.vb">
+      <DependentUpon>cover-photo-selection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cover-photos-home.aspx.designer.vb">
+      <DependentUpon>cover-photos-home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cover-photos-home.aspx.vb">
+      <DependentUpon>cover-photos-home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cover-photos.aspx.designer.vb">
+      <DependentUpon>cover-photos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cover-photos.aspx.vb">
+      <DependentUpon>cover-photos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crop2.aspx.designer.vb">
+      <DependentUpon>crop2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crop2.aspx.vb">
+      <DependentUpon>crop2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="custom-tab-home.aspx.designer.vb">
+      <DependentUpon>custom-tab-home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="custom-tab-home.aspx.vb">
+      <DependentUpon>custom-tab-home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="custom-tab-selection-edit.aspx.designer.vb">
+      <DependentUpon>custom-tab-selection-edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="custom-tab-selection-edit.aspx.vb">
+      <DependentUpon>custom-tab-selection-edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="custom-tab-selection-test.aspx.designer.vb">
+      <DependentUpon>custom-tab-selection-test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="custom-tab-selection-test.aspx.vb">
+      <DependentUpon>custom-tab-selection-test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="custom-tab-selection.aspx.designer.vb">
+      <DependentUpon>custom-tab-selection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="custom-tab-selection.aspx.vb">
+      <DependentUpon>custom-tab-selection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="custom-tabs-test.aspx.designer.vb">
+      <DependentUpon>custom-tabs-test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="custom-tabs-test.aspx.vb">
+      <DependentUpon>custom-tabs-test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="custom-tabs.aspx.designer.vb">
+      <DependentUpon>custom-tabs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="custom-tabs.aspx.vb">
+      <DependentUpon>custom-tabs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="download.aspx.designer.vb">
+      <DependentUpon>download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="download.aspx.vb">
+      <DependentUpon>download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="express-customtab.aspx.designer.vb">
+      <DependentUpon>express-customtab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="express-customtab.aspx.vb">
+      <DependentUpon>express-customtab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="express-sidebar.aspx.designer.vb">
+      <DependentUpon>express-sidebar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="express-sidebar.aspx.vb">
+      <DependentUpon>express-sidebar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fanpages.aspx.designer.vb">
+      <DependentUpon>fanpages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fanpages.aspx.vb">
+      <DependentUpon>fanpages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="footer.ascx.designer.vb">
+      <DependentUpon>footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="footer.ascx.vb">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="friendlist.aspx.designer.vb">
+      <DependentUpon>friendlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="friendlist.aspx.vb">
+      <DependentUpon>friendlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gcPost.aspx.designer.vb">
+      <DependentUpon>gcPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gcPost.aspx.vb">
+      <DependentUpon>gcPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="generate-cover-image.aspx.designer.vb">
+      <DependentUpon>generate-cover-image.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="generate-cover-image.aspx.vb">
+      <DependentUpon>generate-cover-image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="generate-ct-image.aspx.designer.vb">
+      <DependentUpon>generate-ct-image.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="generate-ct-image.aspx.vb">
+      <DependentUpon>generate-ct-image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="generate_image.aspx.designer.vb">
+      <DependentUpon>generate_image.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="generate_image.aspx.vb">
+      <DependentUpon>generate_image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="handshake.aspx.designer.vb">
+      <DependentUpon>handshake.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="handshake.aspx.vb">
+      <DependentUpon>handshake.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="header.ascx.designer.vb">
+      <DependentUpon>header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="header.ascx.vb">
+      <DependentUpon>header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html-toImage.aspx.designer.vb">
+      <DependentUpon>html-toImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html-toImage.aspx.vb">
+      <DependentUpon>html-toImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\import-library-data.aspx.designer.vb">
+      <DependentUpon>import-library-data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\import-library-data.aspx.vb">
+      <DependentUpon>import-library-data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inner-footer.ascx.designer.vb">
+      <DependentUpon>inner-footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="inner-footer.ascx.vb">
+      <DependentUpon>inner-footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inner-header.ascx.designer.vb">
+      <DependentUpon>inner-header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="inner-header.ascx.vb">
+      <DependentUpon>inner-header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="left.ascx.designer.vb">
+      <DependentUpon>left.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="left.ascx.vb">
+      <DependentUpon>left.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="library.aspx.designer.vb">
+      <DependentUpon>library.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="library.aspx.vb">
+      <DependentUpon>library.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="local-user.aspx.designer.vb">
+      <DependentUpon>local-user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="local-user.aspx.vb">
+      <DependentUpon>local-user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log.vb" />
+    <Compile Include="login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginCheck.vb" />
+    <Compile Include="LogSchedulePost.vb" />
+    <Compile Include="page-post-data.aspx.designer.vb">
+      <DependentUpon>page-post-data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page-post-data.aspx.vb">
+      <DependentUpon>page-post-data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pending-messages.aspx.designer.vb">
+      <DependentUpon>pending-messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pending-messages.aspx.vb">
+      <DependentUpon>pending-messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostData.vb" />
+    <Compile Include="publish-cover-photo-edit.aspx.designer.vb">
+      <DependentUpon>publish-cover-photo-edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publish-cover-photo-edit.aspx.vb">
+      <DependentUpon>publish-cover-photo-edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publish-cover-photo.aspx.designer.vb">
+      <DependentUpon>publish-cover-photo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publish-cover-photo.aspx.vb">
+      <DependentUpon>publish-cover-photo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publish-custom-tab.aspx.designer.vb">
+      <DependentUpon>publish-custom-tab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publish-custom-tab.aspx.vb">
+      <DependentUpon>publish-custom-tab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publish-sidebar-edit.aspx.designer.vb">
+      <DependentUpon>publish-sidebar-edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publish-sidebar-edit.aspx.vb">
+      <DependentUpon>publish-sidebar-edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publish-sidebar.aspx.designer.vb">
+      <DependentUpon>publish-sidebar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publish-sidebar.aspx.vb">
+      <DependentUpon>publish-sidebar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Remove-Post.aspx.designer.vb">
+      <DependentUpon>Remove-Post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Remove-Post.aspx.vb">
+      <DependentUpon>Remove-Post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="resize-tabs.ashx.vb">
+      <DependentUpon>resize-tabs.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="resize.ashx.vb">
+      <DependentUpon>resize.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RoutablePage.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoutingHandler.vb" />
+    <Compile Include="scheduler-home.aspx.designer.vb">
+      <DependentUpon>scheduler-home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scheduler-home.aspx.vb">
+      <DependentUpon>scheduler-home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scheduler-new.aspx.designer.vb">
+      <DependentUpon>scheduler-new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scheduler-new.aspx.vb">
+      <DependentUpon>scheduler-new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scheduler.aspx.designer.vb">
+      <DependentUpon>scheduler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scheduler.aspx.vb">
+      <DependentUpon>scheduler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="select-test.aspx.designer.vb">
+      <DependentUpon>select-test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="select-test.aspx.vb">
+      <DependentUpon>select-test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="selection-test.aspx.designer.vb">
+      <DependentUpon>selection-test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="selection-test.aspx.vb">
+      <DependentUpon>selection-test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sent-messages.aspx.designer.vb">
+      <DependentUpon>sent-messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sent-messages.aspx.vb">
+      <DependentUpon>sent-messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service References\ForrentAuthontication\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="setup-page.aspx.designer.vb">
+      <DependentUpon>setup-page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="setup-page.aspx.vb">
+      <DependentUpon>setup-page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sidebar-home.aspx.designer.vb">
+      <DependentUpon>sidebar-home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sidebar-home.aspx.vb">
+      <DependentUpon>sidebar-home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sidebar-templates.aspx.designer.vb">
+      <DependentUpon>sidebar-templates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sidebar-templates.aspx.vb">
+      <DependentUpon>sidebar-templates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sidebar.aspx.designer.vb">
+      <DependentUpon>sidebar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sidebar.aspx.vb">
+      <DependentUpon>sidebar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sidebar_selection.aspx.designer.vb">
+      <DependentUpon>sidebar_selection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sidebar_selection.aspx.vb">
+      <DependentUpon>sidebar_selection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sidebar_selection_edit.aspx.designer.vb">
+      <DependentUpon>sidebar_selection_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sidebar_selection_edit.aspx.vb">
+      <DependentUpon>sidebar_selection_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteUserLogout.aspx.designer.vb">
+      <DependentUpon>SiteUserLogout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteUserLogout.aspx.vb">
+      <DependentUpon>SiteUserLogout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="siteuserlogin.aspx.designer.vb">
+      <DependentUpon>siteuserlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="siteuserlogin.aspx.vb">
+      <DependentUpon>siteuserlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="support.aspx.designer.vb">
+      <DependentUpon>support.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="support.aspx.vb">
+      <DependentUpon>support.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sweepstake-content.aspx.designer.vb">
+      <DependentUpon>sweepstake-content.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sweepstake-content.aspx.vb">
+      <DependentUpon>sweepstake-content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sweepstake-home.aspx.designer.vb">
+      <DependentUpon>sweepstake-home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sweepstake-home.aspx.vb">
+      <DependentUpon>sweepstake-home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sweepstake.aspx.designer.vb">
+      <DependentUpon>sweepstake.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sweepstake.aspx.vb">
+      <DependentUpon>sweepstake.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sweepstake1.aspx.designer.vb">
+      <DependentUpon>sweepstake1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sweepstake1.aspx.vb">
+      <DependentUpon>sweepstake1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tab.aspx.designer.vb">
+      <DependentUpon>tab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tab.aspx.vb">
+      <DependentUpon>tab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates.aspx.designer.vb">
+      <DependentUpon>templates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates.aspx.vb">
+      <DependentUpon>templates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test-image-generate.aspx.designer.vb">
+      <DependentUpon>test-image-generate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test-image-generate.aspx.vb">
+      <DependentUpon>test-image-generate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test-webservice.aspx.designer.vb">
+      <DependentUpon>test-webservice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test-webservice.aspx.vb">
+      <DependentUpon>test-webservice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testGC.aspx.designer.vb">
+      <DependentUpon>testGC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testGC.aspx.vb">
+      <DependentUpon>testGC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training.aspx.designer.vb">
+      <DependentUpon>training.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training.aspx.vb">
+      <DependentUpon>training.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tsma-iframe.aspx.designer.vb">
+      <DependentUpon>tsma-iframe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tsma-iframe.aspx.vb">
+      <DependentUpon>tsma-iframe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="upload.ashx.vb">
+      <DependentUpon>upload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="test1.aspx.designer.vb">
+      <DependentUpon>test1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test1.aspx.vb">
+      <DependentUpon>test1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="upload1.ashx.vb">
+      <DependentUpon>upload1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\footer.ascx.designer.vb">
+      <DependentUpon>footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\footer.ascx.vb">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usercontrols\inner-header.ascx.designer.vb">
+      <DependentUpon>inner-header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\inner-header.ascx.vb">
+      <DependentUpon>inner-header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usercontrols\left.ascx.designer.vb">
+      <DependentUpon>left.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\left.ascx.vb">
+      <DependentUpon>left.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view-autopost.aspx.designer.vb">
+      <DependentUpon>view-autopost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view-autopost.aspx.vb">
+      <DependentUpon>view-autopost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view-video.aspx.designer.vb">
+      <DependentUpon>view-video.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view-video.aspx.vb">
+      <DependentUpon>view-video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormRouteHandler.vb" />
+    <Compile Include="WebService\CompanyPassword.aspx.designer.vb">
+      <DependentUpon>CompanyPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService\CompanyPassword.aspx.vb">
+      <DependentUpon>CompanyPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebService\save-user-selection.aspx.designer.vb">
+      <DependentUpon>save-user-selection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService\save-user-selection.aspx.vb">
+      <DependentUpon>save-user-selection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPageHandler.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="upload.ashx" />
+    <Content Include="resize.ashx" />
+    <None Include="Service References\ForrentAuthontication\FacebookFanPagesSvc.wsdl" />
+    <None Include="Service References\ForrentAuthontication\tsma.ForrentAuthontication.SitePageInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="VideoBlog-flv.bat" />
+    <None Include="VideoBlog.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ForrentAuthontication\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessAccessLayer\BusinessAccessLayer.vbproj">
+      <Project>{CC0949BA-0EAA-4D11-93F4-4158E7DA0C00}</Project>
+      <Name>BusinessAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.vbproj">
+      <Project>{09EDE243-F358-4BFE-90C2-807F5C0A8185}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5192</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

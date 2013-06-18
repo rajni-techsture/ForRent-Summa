@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://services.customeracceptance.forrent.com/soap/facebookfanpages" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns="http://services.customeracceptance.forrent.com/soap/facebookFanPages" xmlns:ns1="http://services.customeracceptance.forrent.com/soap/facebookfanpages" name="FacebookFanPagesSvc" targetNamespace="http://services.customeracceptance.forrent.com/soap/facebookfanpages" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:s1="http://services.customeracceptance.forrent.com/soap/facebookfanpages" targetNamespace="http://services.customeracceptance.forrent.com/soap/facebookfanpages">
+      <xs:simpleType name="FaultMessage">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="Token">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:element name="SitePages" type="s1:SitePages" />
+      <xs:complexType name="SitePages">
+        <xs:sequence minOccurs="0">
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="SitePageInfo" type="s1:SitePageInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SitePageInfo" type="s1:SitePageInfo" />
+      <xs:complexType name="SitePageInfo">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="FacebookPageUrl" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ForrentSiteId" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PropertyName" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IFacebookPages_GetFacebookPages_InputMessage">
+    <wsdl:part name="token" type="ns1:Token" />
+  </wsdl:message>
+  <wsdl:message name="IFacebookPages_GetFacebookPages_OutputMessage">
+    <wsdl:part name="sitepages" type="ns1:SitePages" />
+  </wsdl:message>
+  <wsdl:message name="IFacebookPages_GetFacebookPages_TokenHasZeroSitesFault_FaultMessage">
+    <wsdl:part name="detail" type="ns1:FaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IFacebookPages_GetFacebookPages_TokenNotFoundFault_FaultMessage">
+    <wsdl:part name="detail" type="ns1:FaultMessage" />
+  </wsdl:message>
+  <wsdl:portType name="IFacebookPages">
+    <wsdl:operation name="GetFacebookPages">
+      <wsdl:input name="Request1" message="ns1:IFacebookPages_GetFacebookPages_InputMessage" />
+      <wsdl:output name="Response1" message="ns1:IFacebookPages_GetFacebookPages_OutputMessage" />
+      <wsdl:fault name="TokenNotFoundFault" message="ns1:IFacebookPages_GetFacebookPages_TokenNotFoundFault_FaultMessage" />
+      <wsdl:fault name="TokenHasZeroSitesFault" message="ns1:IFacebookPages_GetFacebookPages_TokenHasZeroSitesFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFacebookPages" type="ns1:IFacebookPages">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFacebookPages">
+      <soap:operation soapAction="http://services.customeracceptance.forrent.com/soap/facebookfanpages" style="document" />
+      <wsdl:input name="Request1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Response1">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TokenNotFoundFault">
+        <soap:fault use="literal" name="TokenNotFoundFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="TokenHasZeroSitesFault">
+        <soap:fault use="literal" name="TokenHasZeroSitesFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FacebookFanPagesSvc">
+    <wsdl:port name="IFacebookPages" binding="ns1:BasicHttpBinding_IFacebookPages">
+      <soap:address location="http://services.customeracceptance.forrent.com/soap/facebookFanPages.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,50 @@
+Imports System
+Imports System.Web
+Imports System.Web.Services
+Imports System.IO
+Imports System.Threading
+Imports System.Net
+Imports Microsoft.VisualBasic
+
+Public Class test
+    Implements System.Web.IHttpHandler
+
+    Sub ProcessRequest(ByVal context As HttpContext) Implements IHttpHandler.ProcessRequest
+        Dim oFile As HttpPostedFile = context.Request.Files("Filedata")
+        Dim strfolder = HttpContext.Current.Request("folder")
+        Dim sDirectory As String = HttpContext.Current.Server.MapPath("/uploads/") '& strfolder & "/"
+        'Try
+        '    ' Determine whether the directory exists.
+        '    'If Directory.Exists(sDirectory) Then
+        '    '    Console.WriteLine("That path exists already.")
+        '    '    Return
+        '    'End If
+
+        '    ' Try to create the directory.
+        '    Dim di As DirectoryInfo = Directory.CreateDirectory(sDirectory)
+        '    'Console.WriteLine("The directory was created successfully at {0}.", Directory.GetCreationTime(Path))
+
+        '    ' Delete the directory.
+        '    'di.Delete()
+        '    'Console.WriteLine("The directory was deleted successfully.")
+
+        'Catch e As Exception
+        '    Console.WriteLine("The process failed: {0}.", e.ToString())
+        'End Try
+        Dim strFileName As String = "test-" & HttpContext.Current.Request("filename")
+        oFile.SaveAs(sDirectory & strFileName)
+           ' If Not Directory.Exists(sDirectory) Then
+            '    Directory.CreateDirectory(sDirectory)
+           ' End If
+            context.Response.ContentType = "text/plain"
+        context.Response.Write(ConfigurationManager.AppSettings("AppPath") & "resize.ashx?P=/uploads/" & strFileName & "&D=150x180")
+        'context.Response.Write(ConfigurationManager.AppSettings("AppPath") & "resize-tabs.ashx?P=/uploads/" & strFileName & "&D=150x180")
+    End Sub
+
+    ReadOnly Property IsReusable() As Boolean Implements IHttpHandler.IsReusable
+        Get
+            Return False
+        End Get
+    End Property
+
+End Class
